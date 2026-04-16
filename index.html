@@ -3,71 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Access Portal</title>
+    <title>Welcome to Trans Dating Apps</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #050505; font-family: 'Inter', sans-serif; overflow: hidden; color: white; }
-        
-        /* Efek Kaca Transparan */
-        .glass-box {
-            background: rgba(20, 20, 20, 0.7);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        body { 
+            /* LINK GAMBAR ANDA DI BAWAH INI */
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://postimg.cc/64ChSnSG');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: sans-serif; 
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-h-screen;
         }
 
-        /* Animasi Tombol Berdenyut */
-        @keyframes pulse-custom {
-            0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(250, 204, 21, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0); }
+        .modal-box { 
+            background-color: rgba(26, 26, 26, 0.9); 
+            border: 1px solid #444; 
+            backdrop-filter: blur(10px);
         }
-        .animate-pulse-custom { animation: pulse-custom 2s infinite; }
 
-        .btn-gradient {
-            background: linear-gradient(135deg, #facc15, #eab308);
+        .btn-yellow {
+            background-color: #ffcc00;
+            color: black;
+            font-weight: 900;
             transition: all 0.3s ease;
         }
-        .btn-gradient:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.1);
+        .btn-yellow:hover {
+            background-color: #eab308;
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body class="relative min-h-screen flex items-center justify-center p-6">
+<body class="min-h-screen w-full p-4">
 
-    <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-yellow-500/10 rounded-full blur-[120px]"></div>
-        <div class="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-yellow-600/10 rounded-full blur-[120px]"></div>
-    </div>
-
-    <div class="relative z-10 glass-box max-w-[400px] w-full p-10 rounded-[2.5rem] text-center">
-        
-        <div class="mb-6 inline-flex p-4 rounded-2xl bg-white/5 border border-white/10">
-            <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-            </svg>
-        </div>
-
-        <h1 class="text-white text-2xl font-black italic uppercase tracking-tight mb-4 leading-tight">
+    <div class="relative z-20 modal-box max-w-[380px] w-full p-8 rounded-3xl text-center shadow-2xl">
+        <h1 class="text-white text-xl font-black uppercase leading-tight mb-4 italic">
             YOU CAN GET FREE ACCESS TO THE TRANS DATING APP
         </h1>
         
-        <p class="text-gray-400 text-sm mb-8 leading-relaxed font-light">
+        <p class="text-gray-300 text-[13px] mb-8 leading-snug">
             Click the "free access" button below then click Open/View & wait 1-3 minutes for the connection to be automatically connected.
         </p>
 
         <div class="flex flex-col gap-4">
-            <button onclick="bukaLinkAcak()" class="btn-gradient animate-pulse-custom text-black font-black py-4 rounded-2xl uppercase text-sm tracking-widest active:scale-95 shadow-xl">
+            <button onclick="bukaLinkAcak()" class="btn-yellow py-4 rounded-xl uppercase text-sm tracking-tight shadow-lg">
                 FREE ACCESS
             </button>
-            <button onclick="bukaLinkAcak()" class="btn-gradient text-black font-black py-4 rounded-2xl uppercase text-sm tracking-widest active:scale-95 shadow-xl">
+            <button onclick="bukaLinkAcak()" class="btn-yellow py-4 rounded-xl uppercase text-sm tracking-tight shadow-lg">
                 VIP ACCESS
             </button>
         </div>
 
-        <p class="text-gray-500 text-[10px] mt-10 italic font-medium tracking-widest">
-            STRICTLY 18+ // SECURE PROTOCOL ACTIVE
+        <p class="text-gray-500 text-[10px] mt-8 italic font-sans">
+            If you don't wait 1-3 minutes, the application will close.
         </p>
     </div>
 
@@ -84,6 +76,5 @@
             window.location.href = daftarLink[acak];
         }
     </script>
-
 </body>
 </html>
